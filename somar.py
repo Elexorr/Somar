@@ -540,39 +540,39 @@ def klik(event):
         if select == 'r6':
             if r1x - 50 < x < r1x + 50 and r1y - 100 < y < r1y + 100:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
             elif r2x - 100 < x < r2x + 100 and r2y - 100 < y < r2y + 100:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
             elif r3x - 50 < x < r3x + 50 and r3y - 100 < y < r3y + 100:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
             elif r4x - 50 < x < r4x + 50 and r4y - 100 < y < r4y + 100:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
             elif r5x - 100 < x < r5x + 100 and r5y - 50 < y < r5y + 50:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x - 50, r6y - 100, r6x + 50, r6y + 100, fill='red')
                 selected = False
             elif r7x - 50 < x < r7x + 50 and r7y - 50 < y < r7y + 50:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
             elif r8x - 50 < x < r8x + 50 and r8y - 50 < y < r8y + 50:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
             elif r9x - 50 < x < r9x + 50 and r9y - 50 < y < r9y + 50:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
             elif r10x - 50 < x < r10x + 50 and r10y - 50 < y < r10y + 50:
                 c.delete(r6)
-                r6 = c.create_rectangle(r5x - 50, r5y - 100, r5x + 50, r5y + 100, fill='red')
+                r6 = c.create_rectangle(r6x-50, r6y-100, r6x+50, r6y+100, fill='red')
                 selected = False
 
             else:
