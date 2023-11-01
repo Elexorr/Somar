@@ -1,7 +1,7 @@
 import tkinter as tk
 
 root = tk.Tk()
-root.title('Somar')
+root.title('Somár')
 root.geometry('403x576')
 root.resizable(width='False', height='False')
 c = tk.Canvas(master=root, width = 400, height = 500)
@@ -921,10 +921,88 @@ def newgame():
     r10x = 350
     r10y = 450
     r10 = c.create_rectangle(r10x - 50, r10y - 50, r10x + 50, r10y + 50, fill='red')
+    
+def savegame():
+    global r1x, r1y, r2x, r2y, r3x, r3y, r4x, r4y, r5x, r5y, r6x, r6y, r7x, r7y, r8x, r8y, r9x, r9y, r10x, r10y
+    file = open('save.txt', 'w')
+    file.write(str(r1x)+'\n')
+    file.write(str(r1y)+'\n')
+    file.write(str(r2x)+'\n')
+    file.write(str(r2y)+'\n')
+    file.write(str(r3x)+'\n')
+    file.write(str(r3y)+'\n')    
+    file.write(str(r4x)+'\n')
+    file.write(str(r4y)+'\n')
+    file.write(str(r5x)+'\n')
+    file.write(str(r5y)+'\n')
+    file.write(str(r6x)+'\n')
+    file.write(str(r6y)+'\n')
+    file.write(str(r7x)+'\n')
+    file.write(str(r7y)+'\n')
+    file.write(str(r8x)+'\n')
+    file.write(str(r8y)+'\n')
+    file.write(str(r9x)+'\n')
+    file.write(str(r9y)+'\n')
+    file.write(str(r10x)+'\n')
+    file.write(str(r10y)+'\n')
+    file.write(str(turns)+'\n')
+    file.close()
 
+def loadgame():
+
+    global r1, r2, r3, r4, r5, r6, r7, r8, r9, r10
+    global r1x, r1y, r2x, r2y, r3x, r3y, r4x, r4y, r5x, r5y, r6x, r6y, r7x, r7y, r8x, r8y, r9x, r9y, r10x, r10y
+    c.delete(r1, r2, r3, r4, r5, r6, r7, r8, r9, r10)
+
+    file = open('save.txt', 'r')
+    lines = file.readlines()
+    r1x = int(lines[0])
+    r1y = int(lines[1])
+    print(r1x, r1y)
+    r2x = int(lines[2])
+    r2y = int(lines[3])
+    r3x = int(lines[4])
+    r3y = int(lines[5])
+    r4x = int(lines[6])
+    r4y = int(lines[7])
+    r5x = int(lines[8])
+    r5y = int(lines[9])
+    r6x = int(lines[10])
+    r6y = int(lines[11])
+    r7x = int(lines[12])
+    r7y = int(lines[13])
+    r8x = int(lines[14])
+    r8y = int(lines[15])
+    r9x = int(lines[16])
+    r9y = int(lines[17])
+    r10x = int(lines[18])
+    r10y = int(lines[19])
+    turns = int(lines[20])
+    T.delete(0, tk.END)
+    T.insert(tk.END, turns)
+
+    r1 = c.create_rectangle(r1x - 50, r1y - 100, r1x + 50, r1y + 100, fill='red')
+    r2 = c.create_rectangle(r2x - 100, r2y - 100, r2x + 100, r2y + 100, fill='blue')
+    r3 = c.create_rectangle(r3x - 50, r3y - 100, r3x + 50, r3y + 100, fill='red')
+    r4 = c.create_rectangle(r4x - 50, r4y - 100, r4x + 50, r4y + 100, fill='red')
+    r5 = c.create_rectangle(r5x - 100, r5y - 50, r5x + 100, r5y + 50, fill='red')
+    r6 = c.create_rectangle(r6x - 50, r6y - 100, r6x + 50, r6y + 100, fill='red')
+    r7 = c.create_rectangle(r7x - 50, r7y - 50, r7x + 50, r7y + 50, fill='red')
+    r8 = c.create_rectangle(r8x - 50, r8y - 50, r8x + 50, r8y + 50, fill='red')
+    r9 = c.create_rectangle(r9x - 50, r9y - 50, r9x + 50, r9y + 50, fill='red')
+    r10 = c.create_rectangle(r10x - 50, r10y - 50, r10x + 50, r10y + 50, fill='red')
+    
 
 NewButton = tk.Button(master = frame1, text ="NEW", width = 10, command=newgame)
 NewButton.place(x=5,y=5)
+
+SaveButton = tk.Button(master = frame1, text ="SAVE", width = 4, command=savegame)
+SaveButton.place(x=5,y=35)
+
+LoadButton = tk.Button(master = frame1, text ="LOAD", width = 4, command=loadgame)
+LoadButton.place(x=46,y=35)
+
+
 
 c.bind('<Button-1>', klik)
 tk.mainloop()
